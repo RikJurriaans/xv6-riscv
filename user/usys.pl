@@ -34,6 +34,7 @@ entry("open");
 entry("mknod");
 entry("unlink");
 entry("fstat");
+entry("getreadcount");
 entry("link");
 entry("mkdir");
 entry("chdir");

@@ -80,6 +80,12 @@ sys_read(void)
 }
 
 uint64
+sys_getreadcount(void)
+{
+  return 69420;
+}
+
+uint64
 sys_write(void)
 {
   struct file *f;
