@@ -26,6 +26,7 @@ void            consputc(int);
 int             kexec(char*, char**);
 
 // file.c
+extern uint     reads;
 struct file*    filealloc(void);
 void            fileclose(struct file*);
 struct file*    filedup(struct file*);

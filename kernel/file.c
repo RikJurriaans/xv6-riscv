@@ -13,6 +13,9 @@
 #include "stat.h"
 #include "proc.h"
 
+struct spinlock readcntlock;
+uint reads;
+
 struct devsw devsw[NDEV];
 struct {
   struct spinlock lock;
@@ -125,6 +128,10 @@ fileread(struct file *f, uint64 addr, int n)
   } else {
     panic("fileread");
   }
+
+  acquire(&readcntlock);
+  reads++;
+  release(&readcntlock);
 
   return r;
 }

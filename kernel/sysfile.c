@@ -82,7 +82,7 @@ sys_read(void)
 uint64
 sys_getreadcount(void)
 {
-  return 69420;
+  return reads;
 }
 
 uint64
