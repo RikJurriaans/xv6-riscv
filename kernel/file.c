@@ -26,6 +26,7 @@ void
 fileinit(void)
 {
   initlock(&ftable.lock, "ftable");
+  initlock(&readcntlock, "ftable");
 }
 
 // Allocate a file structure.
